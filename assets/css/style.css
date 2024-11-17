@@ -1,10 +1,84 @@
 * {
   box-sizing: border-box;
 }
+:root {
+  --header-bg: #10375c;
+  --text-color: #c9d2da;
+}
 html {
   font-size: 62.5%;
 }
 body {
   font-size: 1.6rem;
   font-family: "Cherry Cream Soda", system-ui;
+}
+/* container */
+.container {
+  width: 1170px;
+  margin: 0 auto;
+  max-width: calc(100% - 48px);
+}
+a {
+  text-decoration: none;
+}
+.btn {
+  display: inline-block;
+  min-width: 205px;
+  line-height: 60px;
+  background: #2e80ce;
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 400;
+  border-radius: 999px;
+  text-align: center;
+}
+.btn:hover {
+  opacity: 0.9;
+}
+/* header */
+.header {
+  padding: 30px;
+  background: var(--header-bg);
+
+  min-height: 100vh;
+}
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar__list {
+  display: flex;
+}
+.navbar__link,
+.action__Login {
+  color: var(--text-color);
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1.75;
+  padding: 8px 21px;
+}
+.navbar__link:hover,
+.navbar__link--active {
+  text-shadow: 1px 0 0 currentColor;
+  color: #fff;
+}
+.navbar__link--active::before {
+  position: relative;
+  top: -3px;
+  right: 8px;
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #fff;
+}
+.action__Signup {
+  min-width: 144px;
+  line-height: 44px;
+  font-size: 1.6rem;
+}
+.action__Login {
+  margin-right: 7px;
 }
